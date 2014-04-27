@@ -60,6 +60,7 @@ alias .....='cd ../../../../'
 # git aliases
 alias gg="git log --oneline --all --abbrev-commit --graph --decorate --color"
 alias gs="git status -s"
+alias gd="open -a SourceTree ."
 rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; } #random git commit message
 alias git=hub
 
