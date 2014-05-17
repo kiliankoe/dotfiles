@@ -26,8 +26,8 @@
 	"remember_open_files": false,
 	"show_full_path": true,
 	"soda_folder_icons": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Spacegray Eighties.sublime-theme",
-	"translate_tabs_to_spaces": false,
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
