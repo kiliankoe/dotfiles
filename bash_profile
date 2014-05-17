@@ -85,4 +85,4 @@ export WORKON_HOME=~/envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 export ANDROID_HOME=/Applications/android-sdk
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/usr/local/heroku/bin:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/usr/local/heroku/bin:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/Applications/VirtualBox.app/Contents/MacOS
