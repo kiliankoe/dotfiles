@@ -1,7 +1,7 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"color_scheme": "Packages/User/base16-eighties.dark (SL).tmTheme",
 	"enable_telemetry": "disabled",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": true,
@@ -24,6 +24,10 @@
 	"minimap_scroll_to_clicked_text": false,
 	"open_files_in_new_window": false,
 	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 4,
