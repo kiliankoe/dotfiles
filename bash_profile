@@ -12,6 +12,7 @@ alias ramdisk='diskutil erasevolume HFS+ "RAM Disk" `hdiutil attach -nomount ram
 alias lf='/bin/ls -rt|tail -n1' #list last changed file
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30' #show frequent commands
 alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
+alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
 function backup() { cp $1 $1.bak; }
 function mcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
 function genfile() { dd if=/dev/zero of=file.bin bs=1024 count=0 seek=$[1024 * $1]; } #generate large file quickly, passed in MB
