@@ -7,7 +7,7 @@
 	editor = nano
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -26,3 +26,4 @@
 	smudge = git-media-smudge %f
 [alias]
 	fuck = reset HEAD --hard
+	yolo = push --force
