@@ -9,9 +9,7 @@ alias du='du -ch'
 alias cpProgress='rsync --progress -ravz'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`' # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
-alias lf='/bin/ls -rt|tail -n1' #list last changed file
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30' #show frequent commands
-alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
 alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
 function backup() { cp $1 $1.bak; }
 function mcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
@@ -46,6 +44,8 @@ alias abuntu="ssh kilian@10.211.55.30"
 alias ll='ls -lG'
 alias l='ls -lAhG'
 alias ls='ls -G'
+alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
+alias lf='/bin/ls -rt|tail -n1' #list last changed file
 
 # avoid making mistakes
 alias rm='rm -i'
