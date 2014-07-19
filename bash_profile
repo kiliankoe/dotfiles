@@ -11,6 +11,7 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`' # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30' #show frequent commands
 alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
+function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
 function backup() { cp $1 $1.bak; }
 function mcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
 function genfile() { dd if=/dev/zero of=file.bin bs=1024 count=0 seek=$[1024 * $1]; } #generate large file quickly, passed in MB

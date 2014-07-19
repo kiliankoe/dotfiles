@@ -1,8 +1,6 @@
 require "grid"
 hydra.douserfile("menuconfig")
 
-hydra.alert("Hydra, at your service.", 0.75)
-
 pathwatcher.new(os.getenv("HOME") .. "/.hydra/", hydra.reload):start()
 autolaunch.set(true)
 

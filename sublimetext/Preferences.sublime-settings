@@ -26,12 +26,13 @@
 	"remember_open_files": false,
 	"rulers":
 	[
-		100
+		80
 	],
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 4,
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"scroll_past_end": true
 }
