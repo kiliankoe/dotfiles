@@ -75,6 +75,7 @@ cask install skype
 cask install smoothmouse
 cask install spotify
 cask install steam
+cask install texpad
 cask install the-unarchiver
 cask install torbrowser
 cask install transmission
@@ -115,7 +116,6 @@ cask cleanup
 # Postman -> Chrome Packaged App
 # Reeder -> MAS
 # Sunrise Calendar -> MAS
-# TexPad -> MAS
 # Tweetbot -> MAS
 # Vox -> MAS
 # Winclone
