@@ -59,9 +59,11 @@ cask install gitter
 cask install google-drive
 cask install gpgtools
 cask install handbrake
+cask install istat-menus
 cask install keyboardcleantool
 cask install libreoffice
 cask install macdown
+cask install mackup
 cask install mactex
 cask install minecraft
 cask install mplayerx
