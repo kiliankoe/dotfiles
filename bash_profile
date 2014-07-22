@@ -76,7 +76,7 @@ HISTCONTROL=ignoreboth #fuegt keine direkt aufeinander folgenden duplikat zeilen
 export LANG=en_US.UTF-8
 
 # set default editor
-export EDITOR=vim
+export EDITOR="open -a 'Sublime Text'"
 
 # colors!
 export CLICOLOR=1
