@@ -70,6 +70,7 @@ cask install mplayerx
 cask install nvalt
 cask install onepassword
 cask install openemu
+cask install scansnap-manager
 cask install seil
 cask install sketch
 cask install skim
