@@ -48,11 +48,6 @@ alias ls='ls -G'
 alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
 alias lf='/bin/ls -rt|tail -n1' #list last changed file
 
-# avoid making mistakes
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
 # a quick way to get out of current directory
 alias ..='cd ..'
 alias ...='cd ../../'
