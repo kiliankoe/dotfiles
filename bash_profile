@@ -73,10 +73,14 @@ export LANG=en_US.UTF-8
 # set default editor
 export EDITOR="open -a 'Sublime Text'"
 
+# git branch in prompt
+# $(__git_ps1 "(%s)")
+source ~/scripts/git-prompt.sh
+
 # colors!
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]:$(__git_ps1 "(%s)")\$ '
 
 # node.js magic
 alias npm-exec='PATH=$(npm bin):$PATH'
