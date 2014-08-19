@@ -82,7 +82,7 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 alias npm-exec='PATH=$(npm bin):$PATH'
 
 # virtualenv
-export WORKON_HOME=~/envs
+export WORKON_HOME=~/develop/envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # enable bash-completion
@@ -93,7 +93,7 @@ fi
 export ANDROID_HOME=/Applications/android-sdk
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/usr/local/heroku/bin:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:$PATH
 
-source ~/.profile
+# source ~/.profile
 source ~/scripts/alias.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

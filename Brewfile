@@ -93,6 +93,7 @@ cask install opera-next
 cask install firefox
 
 # brew cask install quicklook plugins
+cask install qlmarkdown
 cask install betterzipql
 cask install ipaql
 cask install qlcolorcode

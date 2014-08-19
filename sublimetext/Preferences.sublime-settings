@@ -10,9 +10,9 @@
 	"ignored_packages":
 	[
 		"Markdown",
+		"Prefixr",
 		"SublimeXiki",
 		"DocBlockr",
-		"Prefixr",
 		"WordCount",
 		"Vintage",
 		"SublimeHaskell",
