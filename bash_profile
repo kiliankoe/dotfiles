@@ -61,6 +61,7 @@ alias gd="git diff"
 alias gst="open -a SourceTree ."
 rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; } #random git commit message
 alias git=hub
+function gi() { curl http://www.gitignore.io/api/$@ ;}
 
 # history stuff
 HISTSIZE=10000
