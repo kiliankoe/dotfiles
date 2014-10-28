@@ -7,11 +7,16 @@ alias ping='ping -c 5'
 alias df='df -H'
 alias du='du -ch'
 alias cpProgress='rsync --progress -ravz'
+alias md5='md5 -r'
+
+# other aliases
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`' # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
 alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30' #show frequent commands
 alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
 alias slogger='~/scripts/Slogger/slogger'
+
+# useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
 function backup() { cp $1 $1.bak; }
 function mcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
@@ -39,9 +44,6 @@ extract () {
      fi
 }
 
-# ssh aliases
-alias abuntu="ssh kilian@10.211.55.30"
-
 # ls aliases
 alias ll='ls -lG'
 alias l='ls -lAhG'
@@ -63,6 +65,7 @@ alias gst="open -a SourceTree ."
 rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; } #random git commit message
 alias git=hub
 function gi() { curl http://www.gitignore.io/api/$@ ;}
+# function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
 # history stuff
 HISTSIZE=10000
