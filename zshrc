@@ -147,6 +147,7 @@ export EDITOR="open -a 'Sublime Text'"
 alias npm-exec='PATH=$(npm bin):$PATH'
 
 # virtualenv
+alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/develop/envs
 source /usr/local/bin/virtualenvwrapper.sh
 
