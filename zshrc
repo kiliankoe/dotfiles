@@ -129,10 +129,16 @@ alias .....='cd ../../../../'
 alias gg="git log --oneline --all --abbrev-commit --graph --decorate --color"
 alias gis="git status -s"
 alias gd="git diff"
-alias gist="open -a SourceTree ."
 rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; } #random git commit message
 alias git=hub
 function gi() { curl http://www.gitignore.io/api/$@ ;}
+function str() {
+    if [ $# -eq 0 ] ; then
+        open -a SourceTree .
+    else
+        open -a SourceTree $1
+    fi
+}
 # function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
 # history stuff
