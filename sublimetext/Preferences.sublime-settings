@@ -5,12 +5,12 @@
 	"enable_telemetry": "disabled",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": true,
-	"font_size": 14.0,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"SublimeLinter",
 		"Markdown",
-		"Swift",
 		"Vintage"
 	],
 	"indent_to_bracket": true,
@@ -27,7 +27,7 @@
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 4,
-	"theme": "Spacegray Eighties.sublime-theme",
+	"theme": "El Capitan.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
