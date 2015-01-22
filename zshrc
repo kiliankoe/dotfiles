@@ -62,7 +62,7 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # enable syntax completion
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # enable z for quick filesystem navigation
 . `brew --prefix`/etc/profile.d/z.sh
