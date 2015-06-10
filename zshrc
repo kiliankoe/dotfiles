@@ -84,6 +84,7 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`' # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
 alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
 alias slogger='~/scripts/Slogger/slogger'
+alias mc='java -d64 -Xmx4096M -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar'
 
 # useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
