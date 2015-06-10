@@ -6,10 +6,10 @@
 	excludesfile = /Users/kilian/.gitignore_global
 	editor = nano
 [difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [push]
 	default = matching
@@ -22,8 +22,9 @@
 [merge]
 	tool = opendiff
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [alias]
 	fuck = reset HEAD --hard
 	yolo = push --force
