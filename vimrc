@@ -10,10 +10,12 @@ set autoindent smartindent	" auto/smart indent
 set tabstop=4				" tabstops
 set cursorline				" highlight current line
 
+set backspace=indent,eol,start
+
 " Magic indentation
 filetype indent plugin on
 
 " Use dark solarized theme
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
