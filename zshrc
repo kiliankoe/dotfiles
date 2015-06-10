@@ -45,7 +45,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/kilian/.rvm/gems/ruby-2.0.0-p481@railstutorial_rails_4_0/bin:/Users/kilian/.rvm/gems/ruby-2.0.0-p481@global/bin:/Users/kilian/.rvm/rubies/ruby-2.0.0-p481/bin:/usr/local/heroku/bin:/Applications/android-sdk:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:/Users/kilian/.rvm/bin:/Users/kilian/.rvm/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/Applications/android-sdk:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:/Users/kilian/.rvm/bin:/Users/kilian/.rvm/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -164,7 +164,7 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 # virtualenv
 alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/develop/envs
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 export ANDROID_HOME=/Applications/android-sdk
 
@@ -173,3 +173,5 @@ source ~/scripts/alias.sh
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
