@@ -175,3 +175,8 @@ source ~/scripts/alias.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Go stuff
+export GOPATH="$HOME/develop/go"
+export GOBIN="$HOME/develop/go/bin"
+export PATH="$PATH:$GOPATH/bin"
