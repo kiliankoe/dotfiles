@@ -180,3 +180,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
+
+alias emacs='emacs-24.5'
