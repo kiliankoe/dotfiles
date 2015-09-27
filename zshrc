@@ -39,13 +39,13 @@ ZSH_THEME="mh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git brew npm sublime rails)
+plugins=(git brew npm sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/Applications/android-sdk:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:/Users/kilian/.rvm/bin:/Users/kilian/.rvm/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/Applications/android-sdk:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:/Users/kilian/.rvm/bin:/Users/kilian/.rvm/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
