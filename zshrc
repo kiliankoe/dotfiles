@@ -86,6 +86,7 @@ function backup() { cp $1 $1.bak; }
 function mcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
 function genfile() { dd if=/dev/zero of=file.bin bs=1024 count=0 seek=$[1024 * $1]; } #generate large file quickly, passed in MB
 function mpx() { open -a MPlayerX $1; }
+function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
 extract () {
 	if [ -f $1 ] ; then
 	  case $1 in
