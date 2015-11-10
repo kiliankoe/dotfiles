@@ -163,14 +163,14 @@ export WORKON_HOME=~/develop/envs
 # source ~/.profile
 source ~/scripts/alias.sh
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # Go stuff
 export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 
 alias emacs='emacs-24.5'
+
+# Ruby/RVM stuff
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
+alias bex="bundle exec"
