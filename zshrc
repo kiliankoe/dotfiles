@@ -45,7 +45,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/Applications/android-sdk:/Applications/android-sdk/tools:/Applications/android-sdk/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:/Users/kilian/.rvm/bin:/Users/kilian/.rvm/bin:$PATH"
+# Both of these don't seem to exist on my current system
+# export PATH="/usr/local/sbin:/usr/texbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
