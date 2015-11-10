@@ -160,8 +160,6 @@ alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/develop/envs
 # source /usr/local/bin/virtualenvwrapper.sh
 
-export ANDROID_HOME=/Applications/android-sdk
-
 # source ~/.profile
 source ~/scripts/alias.sh
 
