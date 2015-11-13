@@ -48,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
 # Both of these don't seem to exist on my current system
 # export PATH="/usr/local/sbin:/usr/texbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:$HOME/scripts"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
