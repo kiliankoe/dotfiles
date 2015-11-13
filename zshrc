@@ -80,6 +80,9 @@ alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram:
 alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
 alias slogger='~/scripts/Slogger/slogger'
 alias mc='java -d64 -Xmx4096M -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar'
+alias btne='to btn -e -c 5 --hd -d'
+alias btns='to btn -c 5 --hd -d'
+alias ptp='to ptp -d'
 
 # useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
