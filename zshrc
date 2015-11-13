@@ -2,8 +2,28 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="mh"
+# ZSH_THEME="mh"
 # mh and norm are pretty nice
+
+ZSH_THEME="powerlevel9k"
+DEFAULT_USER="kilian"
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon dir vcs)
+POWERLEVEL9K_OS_ICON_BACKGROUND='white'
+POWERLEVEL9K_OS_ICON_FOREGROUND='black'
+POWERLEVEL9K_DIR_BACKGROUND='239'
+POWERLEVEL9K_DIR_FOREGROUND='250'
+POWERLEVEL9K_VCS_FOREGROUND='250'
+POWERLEVEL9K_VCS_BACKGROUND='023'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='088'
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_STATUS_VERBOSE=false
+
+# Check me for colors:
+# for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
