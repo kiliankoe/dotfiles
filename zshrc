@@ -210,3 +210,6 @@ alias emacs='emacs-24.5'
 # export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 # source ~/.rvm/scripts/rvm
 alias bex="bundle exec"
+
+# iTerm shell integration
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
