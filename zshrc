@@ -180,6 +180,14 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 # set default editor
 export EDITOR="vim"
 
+# Schwift!
+alias schwift='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift'
+alias schwift-build='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift-build'
+alias schwiftc='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swiftc'
+alias schwiftxcrun='xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain'
+# export PATH="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH"
+# /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/local/opt/go/libexec/bin:/Users/Benjamin.Herzog/go/bin
+
 # node.js magic
 alias npm-exec='PATH=$(npm bin):$PATH'
 
