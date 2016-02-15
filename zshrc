@@ -159,8 +159,6 @@ alias schwift='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/sw
 alias schwift-build='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift-build'
 alias schwiftc='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swiftc'
 alias schwiftxcrun='xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain'
-# export PATH="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH"
-# /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/local/opt/go/libexec/bin:/Users/Benjamin.Herzog/go/bin
 
 # node.js
 alias npm-exec='PATH=$(npm bin):$PATH'
