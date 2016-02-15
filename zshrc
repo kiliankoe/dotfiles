@@ -207,6 +207,6 @@ export PATH="$PATH:$GOPATH/bin"
 alias emacs='emacs-24.5'
 
 # Ruby/RVM stuff
-export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-source ~/.rvm/scripts/rvm
+# export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+# source ~/.rvm/scripts/rvm
 alias bex="bundle exec"
