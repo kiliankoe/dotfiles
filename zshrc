@@ -161,6 +161,9 @@ function str() {
 }
 # function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
+# other useful aliases
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # faster than a lookup via http
+
 # history stuff
 HISTSIZE=10000000
 SAVEHIST=10000000
