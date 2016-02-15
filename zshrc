@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
 # ZSH_THEME="mh"
 # mh and norm are pretty nice
 
@@ -25,26 +24,8 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 # Check me for colors:
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -56,38 +37,30 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(git brew sublime history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# Both of these don't seem to exist on my current system
-# export PATH="/usr/local/sbin:/usr/texbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/scripts"
 # Bind UP and DOWN arrow keys for history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# enable syntax completion
-# source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# set default editor
+export EDITOR="vim"
 
 # enable z for quick filesystem navigation
 . `brew --prefix`/etc/profile.d/z.sh
 
+export PATH="$PATH:$HOME/scripts"
+source ~/scripts/alias.sh
+# source ~/.profile
+
 # useful and 'useful' aliases
 alias zshconfig="subl ~/dotfiles/zshrc"
-alias please="sudo"
+alias zshreload="source ~/dotfiles/zshrc"
+alias please="sudo !!"
 alias killakku="yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null &"
 alias cpProgress='rsync --progress -ravz'
 
@@ -100,12 +73,10 @@ alias rsync='rsync --progress'
 # other aliases and system stuff
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`' # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
-alias noshadows='~/develop/toggle-osx-shadows/toggle-osx-shadows'
-alias slogger='~/scripts/Slogger/slogger'
 alias mc='java -d64 -Xmx4096M -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar'
-alias btne='to btn -e -c 5 --hd -d'
-alias btns='to btn -c 5 --hd -d'
-alias ptp='to ptp -d'
+alias til='cd ~/til && str && subl .'
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # faster than a lookup via http
+alias emacs='emacs-24.5'
 
 # useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
@@ -139,8 +110,8 @@ extract () {
 alias ll='ls -lG'
 alias l='ls -lAhG'
 alias ls='ls -G'
-alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
-alias lf='/bin/ls -rt|tail -n1' #list last changed file
+alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
+alias lf='/bin/ls -rt|tail -n1' # list last changed file
 
 # a quick way to get out of current directory
 alias ..='cd ..'
@@ -164,10 +135,7 @@ function str() {
 }
 # function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
-# other useful aliases
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # faster than a lookup via http
-
-# history stuff
+# history
 HISTSIZE=10000000
 SAVEHIST=10000000
 
@@ -179,9 +147,12 @@ setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 
+# iTerm shell integration
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
-# set default editor
-export EDITOR="vim"
+#############################################
+# Random settings/aliases for some languages
+#############################################
 
 # Schwift!
 alias schwift='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift'
@@ -191,30 +162,23 @@ alias schwiftxcrun='xcrun launch-with-toolchain /Library/Developer/Toolchains/sw
 # export PATH="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH"
 # /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/local/opt/go/libexec/bin:/Users/Benjamin.Herzog/go/bin
 
-# node.js magic
+# node.js
 alias npm-exec='PATH=$(npm bin):$PATH'
 
-# virtualenv
+# python's virtualenv
 alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/develop/envs
 # source /usr/local/bin/virtualenvwrapper.sh
 
-# source ~/.profile
-source ~/scripts/alias.sh
-
-# Go stuff
+# go
 export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 
-alias emacs='emacs-24.5'
-# Rust stuff
+# rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
-# Ruby/RVM stuff
+# ruby/RVM stuff
 # export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
 # source ~/.rvm/scripts/rvm
 alias bex="bundle exec"
-
-# iTerm shell integration
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
