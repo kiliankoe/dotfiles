@@ -69,6 +69,9 @@ source $ZSH/oh-my-zsh.sh
 # export PATH="/usr/local/sbin:/usr/texbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:$HOME/scripts"
+# Bind UP and DOWN arrow keys for history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
