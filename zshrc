@@ -36,6 +36,9 @@ export LANG=en_US.UTF-8
 # set default editor
 export EDITOR="vim"
 
+# add hombrew's sbin to PATH
+export PATH="/usr/local/sbin:$PATH"
+
 # enable z for quick filesystem navigation
 . `brew --prefix`/etc/profile.d/z.sh
 
