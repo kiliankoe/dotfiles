@@ -49,7 +49,7 @@
   "Scrollback Lines" : 0,
   "Scrollback in Alternate Screen" : true,
   "Hide After Opening" : false,
-  "Flashing Bell" : false,
+  "Flashing Bell" : true,
   "BM Growl" : true,
   "Ansi 3 Color" : {
     "Green Component" : 0.7764706,
@@ -308,7 +308,7 @@
     "Blue Component" : 0.2392157
   },
   "Use Bold Font" : true,
-  "Silence Bell" : false,
+  "Silence Bell" : true,
   "Ansi 12 Color" : {
     "Green Component" : 0.6711925,
     "Red Component" : 0.2982939,
