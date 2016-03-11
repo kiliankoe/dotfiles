@@ -111,7 +111,7 @@ alias .....='cd ../../../../'
 # git aliases
 alias gg="git log --oneline --all --abbrev-commit --graph --decorate --color"
 alias gis="git status -s"
-alias gd="git diff"
+alias gd="git diff --word-diff"
 rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; } #random git commit message
 alias git=hub
 function gi() { curl http://www.gitignore.io/api/$@ ;}
