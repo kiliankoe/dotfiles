@@ -167,6 +167,8 @@ export PATH="$PATH:$GOPATH/bin"
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
+export CARGO_HOME="$HOME/.cargo"
+export RUST_SRC_PATH="$HOME/develop/rust/src"
 
 # ruby/RVM stuff
 # export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
