@@ -1,12 +1,12 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"enable_telemetry": "disabled",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": true,
-	"font_face": "Fira Code Retina",
-	"font_size": 12.0,
+	"font_face": "SF Mono",
+	"font_size": 13.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -27,6 +27,7 @@
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
+	"trim_trailing_white_space_on_save": true
 }
