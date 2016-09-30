@@ -155,7 +155,7 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 
 # python's virtualenv
 alias activate='source ./venv/bin/activate'
-export WORKON_HOME=~/develop/envs
+export WORKON_HOME=~/dev/envs
 # source /usr/local/bin/virtualenvwrapper.sh
 
 # go
@@ -166,7 +166,7 @@ export PATH="$PATH:$GOPATH/bin"
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
 export CARGO_HOME="$HOME/.cargo"
-export RUST_SRC_PATH="$HOME/develop/rust/src"
+export RUST_SRC_PATH="$HOME/dev/rust/src"
 
 # ruby/RVM stuff
 # export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
