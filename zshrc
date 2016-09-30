@@ -143,6 +143,9 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 # iTerm shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
+# iCloud
+export ICLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+
 #############################################
 # Random settings/aliases for some languages
 #############################################
