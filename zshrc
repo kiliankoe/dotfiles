@@ -150,12 +150,6 @@ export ICLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 # Random settings/aliases for some languages
 #############################################
 
-# Schwift!
-alias schwift='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift'
-alias schwift-build='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift-build'
-alias schwiftc='/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swiftc'
-alias schwiftxcrun='xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain'
-
 # node.js
 alias npm-exec='PATH=$(npm bin):$PATH'
 
