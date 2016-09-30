@@ -168,7 +168,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export CARGO_HOME="$HOME/.cargo"
 export RUST_SRC_PATH="$HOME/dev/rust/src"
 
-# ruby/RVM stuff
-# export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-# source ~/.rvm/scripts/rvm
-alias bex="bundle exec"
+# ruby/rbenv
+export PATH="$PATH:$HOME/.rbenv/bin"
+eval "$(rbenv init -)"
