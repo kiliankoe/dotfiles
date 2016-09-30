@@ -52,6 +52,7 @@ alias zshreload="source ~/dotfiles/zshrc"
 alias please="sudo !!"
 alias killakku="yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null &"
 alias cpProgress='rsync --progress -ravz'
+alias dev='cd $HOME/dev'
 
 # redefinitions and safety
 alias md5='md5 -r'
