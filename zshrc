@@ -159,9 +159,9 @@ export WORKON_HOME=~/dev/envs
 # source /usr/local/bin/virtualenvwrapper.sh
 
 # go
-export GOPATH="$HOME/develop/go"
-export GOBIN="$HOME/develop/go/bin"
-export PATH="$PATH:$GOPATH/bin"
+export GOPATH="$HOME/dev/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
