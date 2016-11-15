@@ -24,6 +24,7 @@ DEFAULT_USER="kilian"
 # HIST_STAMPS="mm/dd/yyyy"
 
 plugins=(git brew sublime history-substring-search zsh-syntax-highlighting)
+COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
 
