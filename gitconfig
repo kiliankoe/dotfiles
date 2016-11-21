@@ -31,9 +31,12 @@
 [commit]
 [commit]
 	template = /Users/kilian/.stCommitMsg
+	gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [diff]
 	compactionHeuristic = true
+[gpg]
+	program = /usr/local/bin/gpg
