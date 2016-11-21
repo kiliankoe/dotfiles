@@ -40,8 +40,8 @@ export PATH="/usr/local/sbin:$PATH"
 # enable z for quick filesystem navigation
 . `brew --prefix`/etc/profile.d/z.sh
 
-export PATH="$PATH:$HOME/scripts"
-source ~/scripts/alias.sh
+export PATH="$PATH:$HOME/bin"
+source ~/bin/alias.sh
 # source ~/.profile
 
 # useful and 'useful' aliases
