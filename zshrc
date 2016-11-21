@@ -10,9 +10,6 @@ DEFAULT_USER="kilian"
 # Check me for colors:
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
