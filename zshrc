@@ -32,7 +32,7 @@ bindkey '^[[B' history-substring-search-down
 export LANG=en_US.UTF-8
 
 # set default editor
-export EDITOR="micro"
+export EDITOR="vim"
 
 # add hombrew's sbin to PATH
 export PATH="/usr/local/sbin:$PATH"
