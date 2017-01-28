@@ -51,6 +51,8 @@ alias please="sudo !!"
 alias killakku="yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null & yes > /dev/null &"
 alias cpProgress='rsync --progress -ravz'
 alias dev='cd $HOME/dev'
+alias gping='ping 8.8.8.8'
+alias tmp='cd $TMPDIR'
 
 # redefinitions and safety
 alias md5='md5 -r'
