@@ -66,7 +66,7 @@ alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram:
 alias mc='java -d64 -Xmx4096M -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar'
 alias til='cd ~/til && str && subl .'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # faster than a lookup via http
-alias emacs='emacs-24.5'
+# alias emacs='emacs'
 
 # useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
