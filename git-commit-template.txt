@@ -1,22 +1,17 @@
-# <type>: (If applied, this commit will...) <subject> (Max 50 char)
-# |<----  Using a Maximum Of 50 Characters  ---->|
 
 
-# Explain why this change is being made
-# |<----   Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
+#                                  50 Chars ---->|
+#                                                   72 Characters ---->|
 
-# Provide links or keys to any relevant tickets, articles or other resources
-# Example: Github issue #23
-
-# --- COMMIT END ---
-# Type can be 
-#    feat (new feature)
-#    fix (bug fix)
-#    docs (changes to documentation)
-#    style (formatting, missing semi colons, etc; no code change)
-#    refactor (refactoring production code)
-#    test (adding missing tests, refactoring tests; no production code change)
-#    chore (updating grunt tasks etc; no production code change)
+# Type can be
+#    ✨  feat (new feature)
+#    🐛  fix (bug fix)
+#    📚  docs (changes to documentation)
+#    🌹  style (formatting, missing semi colons, etc; no code change)
+#    📝  refactor (refactoring production code)
+#    🔍  test (adding missing tests, refactoring tests; no production code change)
+#    💪  chore (updating grunt tasks etc; no production code change)
+#    🚢  ship (bump a version; release)
 # --------------------
 # Remember to
 #    Separate subject from body with a blank line

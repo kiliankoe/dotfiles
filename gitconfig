@@ -30,7 +30,8 @@
 	yolo = push --force
 [commit]
 [commit]
-	template = /Users/kilian/.stCommitMsg
+	# template = /Users/kilian/.stCommitMsg
+	template = /Users/kilian/dotfiles/git-commit-template.txt
 	gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean %f
