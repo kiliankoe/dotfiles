@@ -178,3 +178,6 @@ eval "$(rbenv init -)"
 # php/composer
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# C++
+alias c11='clang++ -std=c++11'
+
