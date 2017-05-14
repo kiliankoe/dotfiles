@@ -44,6 +44,9 @@ export PATH="$PATH:$HOME/bin"
 source ~/bin/alias.sh
 # source ~/.profile
 
+# prevent homebrew from automatically updating (why once a minute?!)
+HOMEBREW_NO_AUTO_UPDATE=1
+
 # useful and 'useful' aliases
 alias zshconfig="subl ~/dotfiles/zshrc"
 alias zshreload="source ~/dotfiles/zshrc"
