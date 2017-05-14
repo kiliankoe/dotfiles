@@ -149,9 +149,9 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 # iCloud
 export ICLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
-#############################################
-# Random settings/aliases for some languages
-#############################################
+############################################################
+# Random settings/aliases for some languages / environments
+############################################################
 
 # node.js
 alias npm-exec='PATH=$(npm bin):$PATH'
@@ -181,3 +181,5 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # C++
 alias c11='clang++ -std=c++11'
 
+# Xcode
+function xc() { xcodebuild $@ | xcpretty }
