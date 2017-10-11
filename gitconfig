@@ -33,10 +33,12 @@
 	# template = /Users/kilian/.stCommitMsg
 	# template = /Users/kilian/dotfiles/git-commit-template.txt
 	gpgsign = true
+	template = /Users/kilian/.stCommitMsg
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [diff]
 	compactionHeuristic = true
 [gpg]
