@@ -126,6 +126,11 @@ function str() {
         open -a SourceTree $1
     fi
 }
+function ginit() {
+    git init
+    git add .
+    git commit -m 'initial commit'
+}
 # function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
 # report time a command took if it's longer than n seconds
