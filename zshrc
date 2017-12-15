@@ -73,6 +73,7 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # faster than a lo
 
 # useful functions
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
+alias randman='man $(find /usr/share/man -type f | sort -R | head -n1)'
 function backup() { cp $1 $1.bak; }
 function mkcd() { mkdir -p "$1" && cd "$1"; } #mkdir && cd
 function genfile() { dd if=/dev/zero of=file.bin bs=1024 count=0 seek=$[1024 * $1]; } #generate large file quickly, passed in MB
