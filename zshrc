@@ -29,6 +29,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # set default editor
