@@ -73,6 +73,7 @@ HISTFILESIZE=20000
 HISTCONTROL=ignoreboth #fuegt keine direkt aufeinander folgenden duplikat zeilen oder mit leerzeichen startenden zeilen
 
 # change locale
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # set default editor
@@ -80,7 +81,7 @@ export EDITOR="open -a 'Sublime Text'"
 
 # git branch in prompt
 # $(__git_ps1 "(%s)")
-source ~/scripts/git-prompt.sh
+source ~/bin/git-prompt.sh
 
 # colors!
 export CLICOLOR=1
@@ -92,7 +93,7 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 
 # virtualenv
 export WORKON_HOME=~/develop/envs
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # enable bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -103,6 +104,6 @@ export ANDROID_HOME=/Applications/android-sdk
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/texbin:/usr/local/heroku/bin:$ANDROID_HOME:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/Applications/VirtualBox.app/Contents/MacOS:$PATH
 
 # source ~/.profile
-source ~/scripts/alias.sh
+source ~/bin/alias.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
