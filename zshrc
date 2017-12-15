@@ -164,6 +164,7 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 # python's virtualenv
 alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/dev/envs
+alias pip='pip3'
 # source /usr/local/bin/virtualenvwrapper.sh
 
 # go
