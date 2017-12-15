@@ -188,3 +188,7 @@ alias c11='clang++ -std=c++11'
 
 # Xcode
 function xc() { xcodebuild $@ | xcpretty }
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# has to stay at the end of the file
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
