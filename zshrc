@@ -162,8 +162,8 @@ export CARGO_HOME="$HOME/.cargo"
 export RUST_SRC_PATH="$HOME/dev/rust/src"
 
 # ruby/rbenv
-# export PATH="$PATH:$HOME/.rbenv/bin"
-# eval "$(rbenv init -)"
+export PATH="$PATH:$HOME/.rbenv/bin"
+eval "$(rbenv init -)"
 
 # php/composer
 # export PATH="$PATH:$HOME/.composer/vendor/bin"
