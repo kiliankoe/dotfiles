@@ -72,6 +72,7 @@ alias zshconfig="subl ~/dotfiles/zshrc"
 alias zshreload="source ~/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
 alias spmxcode='swift package generate-xcodeproj --enable-code-coverage'
+alias dockerpwd='docker run --rm -it -v $(PWD):/src'
 
 alias l='ls -lAhG'
 alias ls='ls -G'
