@@ -2,6 +2,7 @@
 	name = Kilian Koeltzsch
 	email = me@kilian.io
 	username = kiliankoe
+	signingkey = 24D7C6B4
 [core]
 	excludesfile = /Users/kilian/.gitignore_global
 	editor = vim
