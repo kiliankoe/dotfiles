@@ -28,6 +28,18 @@
 [alias]
 	fuck = reset HEAD --hard
 	yolo = push --force
+	st = status -s
+	lg = log --oneline --all --abbrev-commit --graph --decorate --color
+	stsh = stash --keep-index
+	staash = stash --include-untracked
+	staaash = stash --all # include changes in untracked and ignored files
+	which = !git branch | grep -i
+	lucky = !sh -c 'git checkout $(git which $1 -m1)' -
+	standup = !git log --all \
+	                   --author=$USER \
+	                   --since='9am yesterday' \
+	                   --format=%s
+	lazy-standup = !git standup | say
 [commit]
 [commit]
 	# template = /Users/kilian/.stCommitMsg
