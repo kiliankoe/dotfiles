@@ -80,9 +80,6 @@ alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias lf='/bin/ls -rt | tail -n1' # list last changed file
 
 alias git=hub
-alias glog="git log --oneline --all --abbrev-commit --graph --decorate --color"
-alias gst="git status -s"
-alias gdiff="git diff --word-diff"
 function rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; }
 function str() {
     if [ $# -eq 0 ] ; then
