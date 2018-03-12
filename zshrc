@@ -73,6 +73,7 @@ alias zshreload="source ~/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
 alias spmxcode='swift package generate-xcodeproj --enable-code-coverage'
 alias dockerpwd='docker run --rm -it -v $(PWD):/src'
+alias ytdl='youtube-dl'
 
 alias l='ls -lAhG'
 alias ls='ls -G'
