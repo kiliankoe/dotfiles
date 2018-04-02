@@ -41,6 +41,8 @@
 	                   --since='9am yesterday' \
 	                   --format=%s
 	lazy-standup = !git standup | say
+[url "git@github.com:"]
+    insteadOf = "github:"
 [commit]
 [commit]
 	# template = /Users/kilian/.stCommitMsg
