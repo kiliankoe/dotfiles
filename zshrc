@@ -80,6 +80,8 @@ alias ls='ls -G'
 alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias lf='/bin/ls -rt | tail -n1' # list last changed file
 
+alias tree='tree -C'
+
 alias git=hub
 function rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; }
 function str() {
