@@ -6,19 +6,19 @@
 		<key>phrase</key>
 		<string>😊</string>
 		<key>shortcut</key>
-		<string>:)</string>
+		<string>\:)</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
 		<string>😘</string>
 		<key>shortcut</key>
-		<string>:*</string>
+		<string>\:*</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
 		<string>😄</string>
 		<key>shortcut</key>
-		<string>:D</string>
+		<string>\:D</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
@@ -88,6 +88,12 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
+		<string>❤️</string>
+		<key>shortcut</key>
+		<string>\&lt;3</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
 		<string>akronymisierbar</string>
 		<key>shortcut</key>
 		<string>\aakk</string>
@@ -147,6 +153,12 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
+		<string>ಠ_ಠ</string>
+		<key>shortcut</key>
+		<string>\disapproval</string>
+	</dict>
+	<dict>
+		<key>phrase</key>
 		<string>⋅</string>
 		<key>shortcut</key>
 		<string>\dot</string>
@@ -174,12 +186,6 @@
 		<string>←</string>
 		<key>shortcut</key>
 		<string>\left</string>
-	</dict>
-	<dict>
-		<key>phrase</key>
-		<string>ಠ_ಠ</string>
-		<key>shortcut</key>
-		<string>\look</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
@@ -316,21 +322,9 @@
 	</dict>
 	<dict>
 		<key>phrase</key>
-		<string>❤️</string>
-		<key>shortcut</key>
-		<string>&lt;3</string>
-	</dict>
-	<dict>
-		<key>phrase</key>
 		<string>eigentlich</string>
 		<key>shortcut</key>
 		<string>eig</string>
-	</dict>
-	<dict>
-		<key>phrase</key>
-		<string>me@kilian.io</string>
-		<key>shortcut</key>
-		<string>eml</string>
 	</dict>
 	<dict>
 		<key>phrase</key>
