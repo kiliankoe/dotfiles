@@ -9,7 +9,7 @@ DEFAULT_USER="kilian"
 # Check me for colors:
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
-plugins=(git brew sublime history-substring-search zsh-syntax-highlighting)
+plugins=(git sublime history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
 COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
@@ -184,10 +184,7 @@ alias c11='clang++ -std=c++11'
 # Xcode
 function xc() { xcodebuild $@ | xcpretty }
 
-
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# has to stay at the end of the file
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# has to stay at the end of the file
