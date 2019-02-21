@@ -44,7 +44,6 @@
 [url "git@github.com:"]
     insteadOf = "github:"
 [commit]
-[commit]
 	# template = /Users/kilian/.stCommitMsg
 	# template = /Users/kilian/dotfiles/git-commit-template.txt
 	gpgsign = true
