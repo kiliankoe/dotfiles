@@ -46,6 +46,8 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 # homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
 
+export BAT_THEME="Monokai Extended Light"
+
 
 #########
 # history
@@ -72,7 +74,6 @@ alias zshconfig="subl ~/dotfiles/zshrc"
 alias zshreload="source ~/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
 alias spmxcode='swift package generate-xcodeproj --enable-code-coverage'
-alias dockerpwd='docker run --rm -it -v $(PWD):/src'
 alias ytdl='youtube-dl'
 
 alias l='ls -lAhG'
@@ -143,6 +144,13 @@ function extract() {
 	 fi
 }
 
+# docker
+alias dockerpwd='docker run --rm -it -v $(PWD):/src'
+alias doc='docker-compose'
+
+# specific docker images
+alias jupyter='docker run --name=jupyter -d -p 8080:8888 -v /Users/kilian/dev/jupyter:/home/jovyan/work jupyter/datascience-notebook start.sh jupyter lab && docker logs jupyter'
+
 # node
 # alias npm-exec='PATH=$(npm bin):$PATH'
 
@@ -151,6 +159,7 @@ alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/dev/envs
 alias pip='pip3'
 # source /usr/local/bin/virtualenvwrapper.sh
+# export PIPENV_VENV_IN_PROJECT=1 # always create pipenv vens in the same dir
 
 # go
 export GOPATH="$HOME/dev/go"
@@ -180,3 +189,5 @@ function xc() { xcodebuild $@ | xcpretty }
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # has to stay at the end of the file
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
