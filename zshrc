@@ -26,14 +26,19 @@ export LANG=en_US.UTF-8
 export EDITOR="vim"
 
 export PATH="$PATH:$HOME/bin"
-source ~/bin/alias.sh
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.mint/bin"
+# homebrew's sbin
+export PATH="/usr/local/sbin:$PATH"
+
+# source ~/bin/alias.sh
 
 # Bind UP and DOWN arrow keys for history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # enable z for quick filesystem navigation
-. `brew --prefix`/etc/profile.d/z.sh
+# . `brew --prefix`/etc/profile.d/z.sh
 
 # report time a command took if it's longer than n seconds
 REPORTTIME=5
@@ -42,9 +47,6 @@ export ICLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
 # iTerm shell integration
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
-
-# homebrew's sbin
-export PATH="/usr/local/sbin:$PATH"
 
 export BAT_THEME="Monokai Extended Light"
 
@@ -70,50 +72,31 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 # aliases
 #########
 
-alias zshconfig="subl ~/dotfiles/zshrc"
-alias zshreload="source ~/dotfiles/zshrc"
+alias zshconfig="subl ~/dev/dotfiles/zshrc"
+alias zshreload="source ~/dev/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
-alias spmxcode='swift package generate-xcodeproj --enable-code-coverage'
 alias ytdl='youtube-dl'
 
 alias l='ls -lAhG'
 alias ls='ls -G'
-alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
+# alias lsd='ls -Gal | grep ^d' # only list directories, including hidden ones
 alias lf='/bin/ls -rt | tail -n1' # list last changed file
 
 alias tree='tree -C'
-
-alias git=hub
-function rgc() { git commit -m"`curl -s http://whatthecommit.com/index.txt`"; }
-function str() {
-    if [ $# -eq 0 ] ; then
-        open -a SourceTree .
-    else
-        open -a SourceTree $1
-    fi
-}
-function ginit() {
-    git init
-    git add .
-    git commit -m 'initial commit'
-}
-# function gdate() { git filter-branch -f --env-filter 'if [ $GIT_COMMIT = ' + $1 + ' ] then export GIT_AUTHOR_DATE='+ $2 + ' export GIT_COMMITTER_DATE=' + $2 + ' fi'; }
 
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
 
-alias md5='md5 -r'
 alias df='df -H'
 alias du='du -ch'
 alias rsync='rsync --progress'
 
+alias toggledark="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
+
 # creates a 4GB ramdisk, otherwise -> 8388608 (4096 * 2048)
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`'
-alias mc='java -d64 -Xmx4096M -jar /Applications/Minecraft.app/Contents/Resources/Java/Bootstrap.jar'
-# faster than a lookup via http
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias manrand='man $(find /usr/share/man -type f | sort -R | head -n1)'
 
 function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
@@ -121,8 +104,6 @@ function bak() { cp $1 $1.bak; }
 function mkcd() { mkdir -p "$1" && cd "$1"; }
 #generate large file quickly, passed in MB
 function genfile() { dd if=/dev/zero of=file.bin bs=1024 count=0 seek=$[1024 * $1]; }
-function vlc() { open -a VLC $1; }
-function anybar() { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
 function extract() {
 	if [ -f $1 ] ; then
 	  case $1 in
@@ -144,22 +125,32 @@ function extract() {
 	 fi
 }
 
+# highlight
+# args: 1: size, 2: lang
+# styles: http://www.andre-simon.de/doku/highlight/en/theme-samples.php
+function keycode() {
+    pbpaste | \
+    highlight \
+        --font Menlo \
+        --font-size $1 \
+        --src-lang $2 \
+        --style Andes \
+        --out-format rtf | \
+    pbcopy
+}
+
 # docker
 alias dockerpwd='docker run --rm -it -v $(PWD):/src'
 alias doc='docker-compose'
 
 # specific docker images
-alias jupyter='docker run --name=jupyter -d -p 8080:8888 -v /Users/kilian/dev/jupyter:/home/jovyan/work jupyter/datascience-notebook start.sh jupyter lab && docker logs jupyter'
-
-# node
-# alias npm-exec='PATH=$(npm bin):$PATH'
+alias jupyter='docker run --name=jupyter -d -p 8080:8888 -v /Users/kilian/dev/jupyter:/home/jovyan/work jupyter/datascience-notebook start.sh jupyter lab && open "http://localhost:8080" && docker logs jupyter'
 
 # python/virtualenv
 alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/dev/envs
 alias pip='pip3'
-# source /usr/local/bin/virtualenvwrapper.sh
-# export PIPENV_VENV_IN_PROJECT=1 # always create pipenv vens in the same dir
+export PIPENV_VENV_IN_PROJECT=1 # always create pipenv vens in the same dir
 
 # go
 export GOPATH="$HOME/dev/go"
@@ -171,20 +162,10 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export CARGO_HOME="$HOME/.cargo"
 export RUST_SRC_PATH="$HOME/dev/rust/src"
 
-# ruby/rbenv
-export PATH="$PATH:$HOME/.rbenv/bin"
-eval "$(rbenv init -)"
-
-# php/composer
-# export PATH="$PATH:$HOME/.composer/vendor/bin"
-
-# C++
-alias c11='clang++ -std=c++11'
-
-# Xcode
-function xc() { xcodebuild $@ | xcpretty }
+# Bundle
+alias be='bundle exec'
+alias bef='bundle exec fastlane'
+alias bep='bundle exec pod'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# has to stay at the end of the file
