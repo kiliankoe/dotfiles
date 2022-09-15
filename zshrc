@@ -72,7 +72,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 # aliases
 #########
 
-alias zshconfig="subl ~/dev/dotfiles/zshrc"
+alias zshconfig="nova ~/dev/dotfiles/zshrc"
 alias zshreload="source ~/dev/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
 alias ytdl='youtube-dl'
