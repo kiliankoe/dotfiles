@@ -153,9 +153,9 @@ alias pip='pip3'
 export PIPENV_VENV_IN_PROJECT=1 # always create pipenv vens in the same dir
 
 # go
-export GOPATH="$HOME/dev/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$PATH:$GOBIN"
+# export GOPATH="$HOME/dev/go"
+# export GOBIN="$GOPATH/bin"
+# export PATH="$PATH:$GOBIN"
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
