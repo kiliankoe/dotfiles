@@ -9,7 +9,7 @@ DEFAULT_USER="kilian"
 # Check me for colors:
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
 
-plugins=(git sublime history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sublime history-substring-search zsh-autosuggestions zsh-syntax-highlighting zsh-z)
 COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR="vim"
+export EDITOR="emacs"
 
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/bin"
@@ -95,7 +95,7 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 # aliases
 #########
 
-alias zshconfig="nova ~/dev/dotfiles/zshrc"
+alias zshconfig="code ~/dev/dotfiles/zshrc"
 alias zshreload="source ~/dev/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
 alias ytdl='youtube-dl'
@@ -122,7 +122,7 @@ alias toggledark="osascript -e 'tell app \"System Events\" to tell appearance pr
 alias ramdisk='diskutil erasevolume HFS+ "tmpdisk" `hdiutil attach -nomount ram://8388608`'
 alias manrand='man $(find /usr/share/man -type f | sort -R | head -n1)'
 
-function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
+function manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app; }
 function bak() { cp $1 $1.bak; }
 function mkcd() { mkdir -p "$1" && cd "$1"; }
 #generate large file quickly, passed in MB
@@ -169,11 +169,16 @@ alias doc='docker-compose'
 # specific docker images
 alias jupyter='docker run --name=jupyter -d -p 8080:8888 -v /Users/kilian/dev/jupyter:/home/jovyan/work jupyter/datascience-notebook start.sh jupyter lab && open "http://localhost:8080" && docker logs jupyter'
 
+# swift
+spm () {
+    swift "$@" 2>&1 | xcbeautify
+}
+
 # python/virtualenv
 alias activate='source ./venv/bin/activate'
 export WORKON_HOME=~/dev/envs
-alias pip='pip3'
 export PIPENV_VENV_IN_PROJECT=1 # always create pipenv vens in the same dir
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
 
 # go
 # export GOPATH="$HOME/dev/go"
@@ -191,4 +196,3 @@ alias bef='bundle exec fastlane'
 alias bep='bundle exec pod'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
