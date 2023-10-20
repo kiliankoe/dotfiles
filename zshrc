@@ -55,23 +55,23 @@ export BAT_THEME="Monokai Extended Light"
 REPORTTIME=5
 
 # Modify preexec to report run duration
-preexec() {
-  PREEXEC_START_TIME=$(date +%s)
-  PREEXEC_COMMAND=$1
-}
+# preexec() {
+#   PREEXEC_START_TIME=$(date +%s)
+#   PREEXEC_COMMAND=$1
+# }
 
-# Send a macOS notification if the command took longer than 5 seconds to execute
-precmd() {
-  if [ -n "$PREEXEC_START_TIME" ]; then
-    local END_TIME=$(date +%s)
-    local DURATION=$((END_TIME - PREEXEC_START_TIME))
+# # Send a macOS notification if the command took longer than 5 seconds to execute
+# precmd() {
+#   if [ -n "$PREEXEC_START_TIME" ]; then
+#     local END_TIME=$(date +%s)
+#     local DURATION=$((END_TIME - PREEXEC_START_TIME))
 
-    if (( DURATION >= REPORTTIME )); then
-      # osascript -e "display notification \"Finished after $DURATION seconds\" with title \"$PREEXEC_COMMAND\""
-      terminal-notifier -title "$PREEXEC_COMMAND" -message "Finished after $DURATION seconds" -actions "OK" -timeout 0
-    fi
-  fi
-}
+#     if (( DURATION >= REPORTTIME )); then
+#       # osascript -e "display notification \"Finished after $DURATION seconds\" with title \"$PREEXEC_COMMAND\""
+#       terminal-notifier -title "$PREEXEC_COMMAND" -message "Finished after $DURATION seconds" -actions "OK" -timeout 0
+#     fi
+#   fi
+# }
 
 
 #########
