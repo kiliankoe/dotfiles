@@ -98,7 +98,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 alias zshconfig="code ~/dev/dotfiles/zshrc"
 alias zshreload="source ~/dev/dotfiles/zshrc"
 alias tmp='cd $TMPDIR'
-alias ytdl='youtube-dl'
 
 alias l='ls -lAhG'
 alias ls='ls -G'
@@ -115,6 +114,7 @@ alias .....='cd ../../../../'
 alias df='df -H'
 alias du='du -ch'
 alias rsync='rsync --progress'
+alias ngrok='lt'
 
 alias toggledark="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 
@@ -161,6 +161,10 @@ function keycode() {
         --out-format rtf | \
     pbcopy
 }
+
+# homebrew
+alias buo='brew update && brew outdated'
+alias buc='brew upgrade && brew cleanup'
 
 # docker
 alias dockerpwd='docker run --rm -it -v $(PWD):/src'
