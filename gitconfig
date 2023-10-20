@@ -54,6 +54,7 @@
 	process = git-lfs filter-process
 [diff]
 	compactionHeuristic = true
+	algorithm = patience
 [gpg]
 	program = /usr/local/bin/gpg
 [init]
