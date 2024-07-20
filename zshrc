@@ -118,4 +118,4 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export CARGO_HOME="$HOME/.cargo"
 export RUST_SRC_PATH="$HOME/dev/rust/src"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(atuin init zsh)"
