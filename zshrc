@@ -12,6 +12,7 @@ DEFAULT_USER="kilian"
 plugins=(git sublime history-substring-search zsh-autosuggestions zsh-syntax-highlighting zsh-z)
 COMPLETION_WAITING_DOTS="true"
 
+zstyle ':omz:update' mode reminder
 source $ZSH/oh-my-zsh.sh
 
 
