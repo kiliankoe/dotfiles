@@ -87,6 +87,7 @@ alias df='df -H'
 alias du='du -ch'
 alias rsync='rsync --progress'
 
+alias lg='lazygit'
 alias ngrok='lt'
 alias toggledark="osascript -e 'tell app \"System Events\" to tell appearance preferences to set dark mode to not dark mode'"
 
