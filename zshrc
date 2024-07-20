@@ -30,6 +30,9 @@ export PATH="$PATH:$HOME/.local/bin"
 # homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
 
+# fixes mouse scrolling in bat's pager output in tmux
+export LESS="--mouse"
+
 # Bind UP and DOWN arrow keys for history-substring-search
 # bindkey '^[[A' history-substring-search-up
 # bindkey '^[[B' history-substring-search-down
