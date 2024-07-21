@@ -1,4 +1,3 @@
-# oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="norm-kilian" # mh and norm are pretty nice
 DEFAULT_USER="kilian"
@@ -23,7 +22,6 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 # report time a command took if it's longer than n seconds
 REPORTTIME=5
 
-# general
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 
@@ -36,7 +34,6 @@ export LESS="--mouse"
 
 source ~/dev/dotfiles/private
 
-# aliases
 alias df='df -H'
 alias du='du -ch'
 alias lg='lazygit'
@@ -57,8 +54,6 @@ alias .....='cd ../../../../'
 
 function mkcd() { mkdir -p "$1" && cd "$1"; }
 
-# docker
 alias dockerpwd='docker run --rm -it -v $(PWD):/src'
 
-# atuin
 eval "$(atuin init zsh)"
