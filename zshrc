@@ -56,4 +56,4 @@ function mkcd() { mkdir -p "$1" && cd "$1"; }
 
 alias dockerpwd='docker run --rm -it -v $(PWD):/src'
 
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
